@@ -9,10 +9,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="x-ua-compatible" content="IE=Edge" />
 
-  <link href="/src/app.css" rel="stylesheet">
+  <link href="/src/css/globals.css" rel="stylesheet">
+  <link href="/src/css/app.css" rel="stylesheet">
 
-  <!--<link rel="apple-touch-icon" href="/assets/icon/icon.png">
-  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">-->
+  <link rel="apple-touch-icon" href="/assets/icons/256.png">
   <link rel="manifest" href="/manifest.webmanifest">
 </head>
 
@@ -25,15 +25,12 @@
     <p>Welcome to the PWAPrimer, basic version</p>
   </main>
 
-  <footer>
-    Footer
-  </footer>
-
-  <script src="/src/app.js"></script>
+  <script async defer src="/src/js/app.js"></script>
 
   <script>
     // Check that service workers are registered
-    if ('serviceWorker' in navigator) {
+    // also check that we are not on 
+    if ('serviceWorker' in navigator && location.href.includes('localhost:3333') === false) {
       // Use the window load event to keep the page load performant
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js');
