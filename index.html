@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PWAPrimer Basic</title>
+  <meta name="Description" content="Welcome to the PWAPrimer, basic version ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+
+  <link href="/src/app.css" rel="stylesheet">
+
+  <!--<link rel="apple-touch-icon" href="/assets/icon/icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">-->
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+
+<body>
+  <header>
+    <h1 id='headerTitle'>PWAPrimer Basic</h1>
+  </header>
+
+  <main>
+    <p>Welcome to the PWAPrimer, basic version</p>
+  </main>
+
+  <footer>
+    Footer
+  </footer>
+
+  <script src="/src/app.js"></script>
+
+  <script>
+    // Check that service workers are registered
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+
+</html>
