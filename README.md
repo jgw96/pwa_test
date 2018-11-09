@@ -13,3 +13,4 @@ To test your PWA and make sure it follows all best practices, you can run `npm r
 
 ## Deploy
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://azuredeploy.net/)
+
